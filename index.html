@@ -53,11 +53,56 @@
             </a>
           </li>
         </ul>
-        <button type="button" class="menu-btn">
+        <button
+          type="button"
+          class="menu-btn"
+          onclick="document.getElementById('modal-menu').classList.add('is-open')"
+        >
           <svg class="menu-icon" width="24" height="16">
             <use href="./images/icons.svg#burger"></use>
           </svg>
         </button>
+      </div>
+
+      <div class="modal-menu" id="modal-menu">
+        <div class="menu">
+          <button
+            type="button"
+            class="menu-close-btn"
+            onclick="document.getElementById('modal-menu').classList.remove('is-open')"
+          >
+            <svg width="14" height="14">
+              <use href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+          <nav class="nav-menu">
+            <ul class="menu-list">
+              <li><a class="menu-link current" href="./index.html">Home</a></li>
+              <li>
+                <a class="menu-link" href="#recipe">How it’s made?</a>
+              </li>
+              <li>
+                <a class="menu-link" href="#feedback">Chocolate is loved</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="menu-media-list">
+            <li>
+              <a href="#" class="menu-media-link">
+                <svg class="menu-media-icon" width="20" height="20">
+                  <use href="./images/icons.svg#insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu-media-link">
+                <svg class="menu-media-icon" width="26" height="22">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -404,7 +449,13 @@
             <li><button type="button" class="slider-btn"></button></li>
             <li><button type="button" class="slider-btn"></button></li>
           </ul>
-          <button type="button" class="feedback-btn">Leave a review</button>
+          <button
+            type="button"
+            class="feedback-btn"
+            onclick="document.getElementById('backdrop').classList.add('is-open')"
+          >
+            Leave a review
+          </button>
         </div>
       </section>
     </main>
@@ -465,15 +516,20 @@
       </div>
     </footer>
 
-    <div class="backdrop">
+    <div class="backdrop" id="backdrop">
       <div class="modal">
-        <button type="button" class="modal-close-btn">
-          <svg class="close-icon" width="28" height="28">
-            <use href="./images/icons.svg#icon-x-close"></use>
+        <button
+          type="button"
+          class="modal-close-btn"
+          onclick="document.getElementById('backdrop').classList.remove('is-open')"
+        >
+          <svg class="close-icon" width="14" height="14">
+            <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
         <p class="modal-text">
-          LEAVE A REVIEW ABOUT <span class="orange">OUR CHOCOLATE</span>
+          LEAVE A REVIEW ABOUT
+          <span class="orange">OUR CHOCOLATE</span>
         </p>
         <form>
           <div class="form-wrraper-cont">
@@ -486,8 +542,8 @@
                 name="user-name"
                 required
               />
-              <svg class="modal-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-user"></use>
+              <svg class="modal-icon" width="17" height="17">
+                <use href="./images/icons.svg#user"></use>
               </svg>
             </div>
           </div>
@@ -501,8 +557,8 @@
                 name="user-email"
                 required
               />
-              <svg class="modal-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-mail"></use>
+              <svg class="modal-icon" width="17" height="17">
+                <use href="./images/icons.svg#mail"></use>
               </svg>
             </div>
           </div>
@@ -516,17 +572,15 @@
                 name="user-tell"
                 required
               />
-              <svg class="modal-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-phone"></use>
+              <svg class="modal-icon" width="17" height="17">
+                <use href="./images/icons.svg#phone"></use>
               </svg>
             </div>
           </div>
           <div class="form-wrraper-cont-coment">
-            <label class="modal-form-label-coment" for="user-coment"
-              >Comment</label
-            >
+            <label class="modal-form-label" for="user-coment">Comment</label>
             <textarea
-              class="modal-textarea"
+              class="modal-input textarea"
               id="user-coment"
               placeholder="Enter text"
             ></textarea>
@@ -539,12 +593,14 @@
             />
             <label for="user-checkbox" class="custom-label-user-checkbox">
               <span class="custom-checkbox"
-                ><svg class="" width="10" height="9">
-                  <use href="./images/icons.svg#icon-icon"></use>
+                ><svg class="check-icon" width="10" height="9">
+                  <use href="./images/icons.svg#check"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a class="privacy-policy" href="#">Privacy Policy</a>
+              <span class="privacy-policy-container">
+                I accept the terms and conditions of the
+                <a class="privacy-policy" href="#">Privacy Policy</a>
+              </span>
             </label>
           </div>
           <button class="modal-submit" type="submit">Send</button>
