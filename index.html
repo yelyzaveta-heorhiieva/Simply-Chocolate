@@ -33,8 +33,8 @@
         <nav class="nav">
           <ul class="nav-list">
             <li><a href="./index.html" class="nav-link">Home</a></li>
-            <li><a href="#" class="nav-link">How it’s made?</a></li>
-            <li><a href="#" class="nav-link">Chocolate is loved</a></li>
+            <li><a href="#recipe" class="nav-link">How it’s made?</a></li>
+            <li><a href="#feedback" class="nav-link">Chocolate is loved</a></li>
           </ul>
         </nav>
         <ul class="media-list">
@@ -70,8 +70,8 @@
           </h1>
           <div class="hero-wrapper">
             <button type="button" class="hero-btn">Buy now</button>
-            <a href="#" class="made-link">How it’s made</a>
-            <a href="#" class="scroll-link"
+            <a href="#recipe" class="made-link">How it’s made</a>
+            <a href="#footer" class="scroll-link"
               >scroll down
               <div class="mark-container">
                 <svg width="16" height="10" class="mark-icon">
@@ -254,7 +254,7 @@
         </div>
       </section>
 
-      <section class="recipe">
+      <section class="recipe" id="recipe">
         <div class="container recipe-container">
           <h2 class="recipe-title">
             hOW IT’S <span class="title-span">made?</span>
@@ -331,7 +331,7 @@
         </div>
       </section>
 
-      <section class="feedback">
+      <section class="feedback" id="feedback">
         <div class="container">
           <h2 class="feedback-title">
             <span class="title-span">chocolate</span> is loved
@@ -411,42 +411,57 @@
 
     <footer class="footer" id="footer">
       <div class="container">
-        <p class="footer-text">
-          <span class="title-span">Chocolate</span> a delicious cure for a bad
-          day
-        </p>
-        <address class="footer-address">
-          <p class="footer-address-text">Contact us</p>
-          <ul class="address-list">
-            <li class="address-list-item">
-              <a class="address-link" href="tel:+380684439426"
-                >+380 (68) 443-94-26</a
-              >
+        <div class="address-container">
+          <p class="footer-text">
+            <span class="title-span">Chocolate</span> a delicious cure for a bad
+            day
+          </p>
+          <address class="footer-address">
+            <p class="footer-address-text">Contact us</p>
+            <ul class="address-list">
+              <li class="address-list-item">
+                <a class="address-link" href="tel:+380684439426"
+                  >+380 (68) 443-94-26</a
+                >
+              </li>
+              <li class="address-list-item">
+                <a class="address-link" href="mailto:simplycthoc@gmail.com"
+                  >simplycthoc@gmail.com</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="menu-subscribe-container">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="./index.html">Home</a>
             </li>
-            <li class="address-list-item">
-              <a class="address-link" href="mailto:simplycthoc@gmail.com"
-                >simplycthoc@gmail.com</a
-              >
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#recipe">How it’s made?</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="./index.html">Our products</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="./index.html">Top sellers</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#feedback">Chocolate is loved</a>
             </li>
           </ul>
-        </address>
-        <ul class="footer-nav-list">
-          <li class="footer-nav-item">
-            <a class="footer-nav-link" href="./index.html">Home</a>
-          </li>
-          <li class="footer-nav-item">
-            <a class="footer-nav-link" href="#">How it’s made?</a>
-          </li>
-          <li class="footer-nav-item">
-            <a class="footer-nav-link" href="./index.html">Our products</a>
-          </li>
-          <li class="footer-nav-item">
-            <a class="footer-nav-link" href="./index.html">Top sellers</a>
-          </li>
-          <li class="footer-nav-item">
-            <a class="footer-nav-link" href="#chocolate">Chocolate is loved</a>
-          </li>
-        </ul>
+          <form action="" class="subscribe-form" name="subscribe">
+            <input
+              type="email"
+              class="subscribe-input"
+              name="user-email"
+              placeholder="Enter your email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              required
+            />
+            <button class="subscribe-btn" type="submit">Subscribe</button>
+          </form>
+        </div>
       </div>
     </footer>
 
